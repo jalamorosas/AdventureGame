@@ -1,8 +1,7 @@
 /*
-KNOWN ISSUES:
--You can go to the same place over and over again to farm adventurer.xp and coins
--Still no endgame
--Graveyard still hasn't been programmed.
+   KNOWN ISSUES:
+   -Still no way to beat
+   -Graveyard still hasn't been programmed.
 */
 
 
@@ -68,7 +67,8 @@ class Game {
       exit = false;
       while (exit != true){
          System.out.println(
-            "\nWhere would you like to go?"
+            "\nLevel 1:" 
+            + "\nWhere would you like to go?"
             + "\n a) Cave"
             + "\n b) Spooky House"
             //+ "\n c) Graveyard"
@@ -245,6 +245,7 @@ class Game {
                               + "\nThe light is too much for him to handle and he turns into dust"
                               + "\nACHIEVEMENT UNLOCKED!: Eliminating the vampire"
                               + "\n+1000 xp!");
+                           adventurer.achievements = adventurer.achievements + 1;
                            adventurer.xp = adventurer.xp + 1000;
                            exitmain = true;
                            break;
@@ -259,7 +260,9 @@ class Game {
                         + "\nThe air smells of mold"
                         + "\nYou reach the bottom..."
                         + "\nTurn on the lights..."
-                        + "\nAnd find a huge pile of gold coins!");
+                        + "\nAnd find a huge pile of gold coins!"
+                        + "\nACHIEVEMENT UNLOCKED!: Down the stairs and to the right"
+                        + "\n+1000xp");
                      adventurer.money = adventurer.money + 1000;
                      System.out.println(adventurer.money);
                      break;
